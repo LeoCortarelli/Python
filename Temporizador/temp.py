@@ -17,7 +17,7 @@ while temp != 0:
     # SEMPRE NESSA FUNÇÃO A PRIMEIRO RETORNO QUE E O RESULTADO ELE ARMAZENA NA PRIMEIRA VARIAVEL
     # O SEGUNDO RESULTADO ELE VAI ARMAZENAR NA SEGUNDA VARIAVEL
 
-    timer = "{:02d}:{:02d}".format(minutos,segundos)
+    timer = "{:02d}:{:02d}".format(minutos,segundos) #FORMATANDO PARA MINITOS E SEGUNDOS
     print(timer, end="\r")
     # O (\r) ele reescreve
     time.sleep(1) # ESSA FUNÇÃO DESACELERA O CODIGO
