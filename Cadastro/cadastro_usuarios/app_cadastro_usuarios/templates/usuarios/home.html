@@ -4,15 +4,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleHome.css">
     <title>Cadastro</title>
   </head>
+    <style>
+        .styleCadastroUsuario{
+          text-align: center;
+          margin-top: 15px;
+          font-weight: bold;
+        }    
+        .divform{
+          margin-left: 42%;
+        }
+    </style>
   <body>
     <nav style="background-color: aquamarine !important;" class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
+        <span class="navbar-brand mb-0 h1">Cadastre - se</span>
       </div>
     </nav>
-    <h1>Cadastre - se</h1>
+
+    <div>
+      <h2 class="styleCadastroUsuario">Cadastro de Usuario</h2><br>
+      <form action="{% url 'listagem_usuarios' %}" method="post"> <!-- Enviando formulario para outro arquivo assim o e oque o django entente para enviar um arquivo-->
+              {% csrf_token %}
+        <div class="divform">
+            <label style="margin-left: 65px;">Nome</label><br>
+            <input type="text" name="nome" required>
+            <br>
+            <br>
+            <label style="margin-left: 65px;">idade</label><br>
+            <input type="text" name="idade" required>
+            <br>
+            <br>
+            <button>Enviar</button>
+          </div>
+      </form>  
+    </div>
 
     
 

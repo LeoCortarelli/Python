@@ -8,5 +8,7 @@ urlpatterns = [
     # Se quiser que fosse outra url deve colocar 
     # path('leocortarelli/')
     
-    # parou no min 6:58
+    # URL PARA AODE SERÁ ENVIADO OS DADOS DO FORMULARIO PARA A LISTAGEM
+    path('usuario',views.usuarios,name='listagem_usuarios') # listagem_usuarios e do form home.html
+                # voce precisa criar dentro da view a função usuario
 ]
